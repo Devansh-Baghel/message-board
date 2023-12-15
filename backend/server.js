@@ -1,10 +1,8 @@
 const express = require("express");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const Message = require("./models/messageSchema")
+const Message = require("./models/messageSchema");
 require("dotenv").config();
 
 const app = express();
@@ -36,9 +34,20 @@ app.use(cors());
 // routes
 app.get("/messages", async (req, res) => {
   try {
-    const messages = await Message.find()
-    res.status(201).json(messages)
+    const messages = await Message.find();
+    res.status(201).json(messages);
   } catch (error) {
-    res.status(500).json({error: "Unable to get messages"})
+    res.status(500).json({ error: "Unable to get messages" });
   }
-})
+});
+
+app.post("/messages", async (req, res) => {
+  try {
+    const { name, message } = req.body;
+    const newMessage = new Message({ name, message });
+    await newMessage.save();
+    res.status(201).json({ message: "Message added successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Unable to add message" });
+  }
+});
