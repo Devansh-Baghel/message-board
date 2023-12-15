@@ -4,10 +4,10 @@ const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const Message = require("./models/messageSchema")
 require("dotenv").config();
 
 const app = express();
-
 const port = 2023;
 
 // connect to mongodb
