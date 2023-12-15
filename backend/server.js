@@ -32,3 +32,13 @@ mongoose
 // middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+// routes
+app.get("/messages", async (req, res) => {
+  try {
+    const messages = await Message.find()
+    res.status(201).json(messages)
+  } catch (error) {
+    res.status(500).json({error: "Unable to get messages"})
+  }
+})
