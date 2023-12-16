@@ -1,4 +1,5 @@
 import React from 'react'
+import MessageWindow from './MessageWindow'
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
         <a href="https://github.com/Devansh-Baghel/message-board" className=''>
           <button className='btn btn-neutral'>🔗 Source Code</button>
         </a>
+        <MessageWindow />
       </div>
     </div>
   )
