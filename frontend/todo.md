@@ -1,3 +1,6 @@
 - [ ] make source code button responsive using daisyui
+- [ ] randomize chat bubble colors
+- [ ] add error page
+- [ ] add loading icon
 - [ ] 
 - [ ] 

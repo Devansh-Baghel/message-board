@@ -9,14 +9,17 @@ function MessageWindow() {
     fetcher,
   );
 
-  console.log(data);
+  if (isLoading) return <h1>Loading ...</h1>
+  if (error) return <h1>Error loading page</h1>
   return (
-    <div className="border-neutral border-4 rounded-xl h-[370px] w-full p-4">
+    <div className="border-neutral border-4 rounded-xl h-[370px] w-full py-4">
       {data.map((item) => {
         return (
-          <div>
-            <p>{item.name}</p>
-            <p>{item.message}</p>
+          <div className="chat chat-start" key={item._id}>
+            <div className="chat-bubble chat-bubble-primary flex flex-col">
+              {item.message}
+              <div className="badge badge-neutral">{item.name}</div>
+            </div>
           </div>
         );
       })}
