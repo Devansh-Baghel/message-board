@@ -1,5 +1,6 @@
 import React from 'react'
 import MessageWindow from './MessageWindow'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -10,6 +11,9 @@ function Home() {
           <button className='btn btn-neutral'>🔗 Source Code</button>
         </a>
         <MessageWindow />
+        <Link to="/new" className=''>
+          <button className='btn btn-neutral'>+ Add Message</button>
+        </Link>
       </div>
     </div>
   )

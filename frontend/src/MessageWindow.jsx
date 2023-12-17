@@ -13,7 +13,8 @@ function MessageWindow() {
   if (isLoading) return <h1>Loading ...</h1>
   if (error) return <h1>Error loading page</h1>
   return (
-    <div className="border-neutral border-4 rounded-xl h-[370px] w-full py-4">
+    <div className="overflow-auto flex flex-col-reverse border-neutral border-4 rounded-xl h-[370px] w-full py-4">
+    <div>
       {data.map((item) => {
         return (
           <div className="chat chat-start flex flex-col px-4" key={item._id}>
@@ -25,6 +26,7 @@ function MessageWindow() {
           </div>
         );
       })}
+    </div>
     </div>
   );
 }
