@@ -1,5 +1,6 @@
 import React from "react";
 import useSWR from "swr";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -15,11 +16,12 @@ function MessageWindow() {
     <div className="border-neutral border-4 rounded-xl h-[370px] w-full py-4">
       {data.map((item) => {
         return (
-          <div className="chat chat-start" key={item._id}>
+          <div className="chat chat-start flex flex-col px-4" key={item._id}>
             <div className="chat-bubble chat-bubble-primary flex flex-col">
               {item.message}
               <div className="badge badge-neutral">{item.name}</div>
             </div>
+            <p>{formatDistanceToNow(new Date(item.added), {addSuffix: true})}</p>
           </div>
         );
       })}

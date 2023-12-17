@@ -43,8 +43,7 @@ app.get("/messages", async (req, res) => {
 
 app.post("/messages", async (req, res) => {
   try {
-    const { name, message } = req.body;
-    const added = new Date()
+    const { name, message, added } = req.body;
     const newMessage = new Message({ name, message, added });
     await newMessage.save();
     res.status(201).json({ message: "Message added successfully" });
