@@ -6,7 +6,7 @@ const Message = require("./models/messageSchema");
 require("dotenv").config();
 
 const app = express();
-const port = 2023;
+const port = process.env.PORT || 3030;
 
 // connect to mongodb
 const dbUri = process.env.DB_URI;
