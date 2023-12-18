@@ -6,7 +6,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function MessageWindow() {
   const { data, error, isLoading } = useSWR(
-    "http://localhost:2023/messages",
+    "https://message-board-92li.onrender.com/messages",
     fetcher,
   );
 

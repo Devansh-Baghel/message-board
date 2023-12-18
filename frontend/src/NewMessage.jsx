@@ -13,7 +13,7 @@ function NewMessage() {
     event.preventDefault();
     try {
       const added = new Date().toISOString()
-      await axios.post("http://localhost:2023/messages", {name, message, added})
+      await axios.post("https://message-board-92li.onrender.com/messages", {name, message, added})
       alert("Message added")
       navigate("/")
       window.location.reload()
