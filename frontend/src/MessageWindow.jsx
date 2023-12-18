@@ -1,6 +1,6 @@
 import React from "react";
 import useSWR from "swr";
-import formatDistanceToNow from "date-fns/formatDistanceToNow";
+import formatDistance from "date-fns/formatDistance";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -13,7 +13,7 @@ function MessageWindow() {
   if (isLoading) return <h1>Loading ...</h1>
   if (error) return <h1>Error loading page</h1>
   return (
-    <div className="overflow-auto flex flex-col-reverse border-neutral border-4 rounded-xl h-[370px] w-full py-4">
+    <div className="overflow-auto flex flex-col-reverse border-neutral border-4 rounded-xl h-[460px] w-full py-4">
     <div>
       {data.map((item) => {
         return (
@@ -22,7 +22,7 @@ function MessageWindow() {
               {item.message}
               <div className="badge badge-neutral">{item.name}</div>
             </div>
-            <p>{formatDistanceToNow(new Date(item.added), {addSuffix: true})}</p>
+            <p>{formatDistance(new Date(item.added), new Date(),{addSuffix: true})}</p>
           </div>
         );
       })}
