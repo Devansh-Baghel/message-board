@@ -1,7 +1,7 @@
 # Message Board
 [Live Link](https://message-board-odin.vercel.app/)
 
-A simple message board made with [React](https://react.dev/), [MongoDB](https://www.mongodb.com/), [Express](https://expressjs.com/) and [Tailwind](https://tailwindcss.com/).
+A simple message board made with [React](https://react.dev/), [MongoDB](https://www.mongodb.com/), [Express](https://expressjs.com/), [Tailwind](https://tailwindcss.com/) and [DaisyUI](https://daisyui.com/)
 
 Also this is my submission for [TOP's Mini Message Board Project](https://www.theodinproject.com/lessons/nodejs-mini-message-board)
 
