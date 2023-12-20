@@ -1,6 +1,7 @@
 import React from "react";
 import useSWR from "swr";
 import formatDistance from "date-fns/formatDistance";
+import Loading from "./Loading";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -10,8 +11,8 @@ function MessageWindow() {
     fetcher,
   );
 
-  if (isLoading) return <h1>Loading ...</h1>
-  if (error) return <h1>Error loading page</h1>
+  if (isLoading) return <Loading />
+  if (error) return <h1>Error loading messages</h1>
   return (
     <div className="overflow-auto flex flex-col-reverse border-neutral border-4 rounded-xl h-[460px] w-full py-4">
     <div>
