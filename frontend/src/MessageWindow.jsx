@@ -7,7 +7,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function MessageWindow() {
   const { data, error, isLoading } = useSWR(
-    "https://message-board-92li.onrender.com/messages",
+    "https://msg-board.adaptable.app/messages",
     fetcher,
   );
 
