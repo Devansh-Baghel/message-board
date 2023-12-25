@@ -19,7 +19,7 @@ function MessageWindow() {
       {data.map((item) => {
         return (
           <div className="chat chat-start flex flex-col px-4" key={item._id}>
-            <div className="chat-bubble chat-bubble-primary flex flex-col">
+            <div className="chat-bubble chat-bubble-primary flex flex-col whitespace-pre-wrap">
               {item.message}
               <div className="badge badge-neutral">{item.name}</div>
             </div>
