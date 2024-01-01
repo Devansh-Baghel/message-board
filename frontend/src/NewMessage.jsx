@@ -14,7 +14,6 @@ function NewMessage() {
     try {
       const added = new Date().toISOString()
       await axios.post("https://msg-board.adaptable.app/messages", {name, message, added})
-      alert("Message added")
       navigate("/")
       window.location.reload()
     } catch (error) {
