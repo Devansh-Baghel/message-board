@@ -6,7 +6,7 @@ A simple message board made with [React](https://react.dev/), [MongoDB](https://
 Also this is my submission for [TOP's Mini Message Board Project](https://www.theodinproject.com/lessons/nodejs-mini-message-board)
 
 - ✅ Frontend is deployed on vercel
-- ✅ Backend is deployed [here](https://message-board-92li.onrender.com/messages) on [render](https://render.com/).
+- ✅ Backend is deployed [here](https://msg-board.adaptable.app/messages) on [Adaptable](https://adaptable.io/).
 - ✅ Fully responsive
 
 ## Screenshots
