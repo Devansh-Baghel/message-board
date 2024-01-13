@@ -2,7 +2,7 @@ import React from "react";
 
 function Note() {
   return (
-    <div className="mt-12 mx-4 px-4 rounded-md bg-blue-50 md:max-w-2xl md:mx-auto md:px-8">
+    <div className="mx-4 px-4 rounded-3xl bg-blue-50 md:max-w-2xl md:mx-auto md:px-8 border-blue-300 border-2 text-sm">
       <div className="flex justify-between py-3">
         <div className="flex">
           <div>
@@ -23,25 +23,11 @@ function Note() {
             <span className="text-blue-500 font-semibold">Info</span>
             <div className="text-blue-500">
               <div className="mt-1">
-                New sales from the last subscribers - 20K USD in revenue.
+                The message you enter will be visible publicly.
               </div>
             </div>
           </div>
         </div>
-        <button className="self-start text-blue-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
       </div>
     </div>
   );

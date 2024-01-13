@@ -27,11 +27,10 @@ function NewMessage() {
 
   return (
     <div className="p-6 flex items-center flex-col">
-      <h1 className="text-center text-3xl font-bold ">
+      <h1 className="text-center text-3xl font-bold mb-10">
         Add a new message
       </h1>
 
-      <Note />
 
       <form
         className="flex flex-col gap-5 max-w-[320px]"
@@ -49,7 +48,7 @@ function NewMessage() {
           className="input input-bordered input-primary w-full max-w-xs"
         />
         <textarea
-          className="textarea textarea-primary h-[100px]"
+          className="textarea textarea-primary h-[100px] rounded-3xl"
           placeholder="Your message"
           maxLength="200"
           required
@@ -58,6 +57,7 @@ function NewMessage() {
             setMessage(e.target.value);
           }}
         ></textarea>
+      <Note />
         <button type="submit" className="btn btn-neutral">
           Submit
         </button>
