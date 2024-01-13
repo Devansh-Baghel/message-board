@@ -11,3 +11,5 @@ Also this is my submission for [TOP's Mini Message Board Project](https://www.th
 
 ## Screenshots
 ![Screenshot from 2023-12-18 20-11-57](https://github.com/Devansh-Baghel/message-board/assets/77718741/61806ac4-0fb7-43e9-aaa4-50b94016c2dd)
+![Screenshot from 2024-01-13 17-15-55](https://github.com/Devansh-Baghel/message-board/assets/77718741/ab0686bc-19e2-4d60-9e71-43f45394dc99)
+
